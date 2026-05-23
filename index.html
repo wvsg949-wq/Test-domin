@@ -1,11 +1,87 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+<!-- ═══════════════════════════════════════════════
+     SEO: Core meta tags
+═══════════════════════════════════════════════ -->
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>AASHISH KUMAR RAY | Digital Architect</title>
-<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Orbitron:wght@400;700;900&family=Share+Tech+Mono&family=Rajdhani:wght@300;400;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<title>B44ner | Aashish Kumar Ray — Developer & Digital Architect</title>
+<meta name="description" content="B44ner is the portfolio of Aashish Kumar Ray — 18-year-old Python developer, web builder, and AI enthusiast from Delhi, India. Building digital tools, bots, and cyberpunk web apps." />
+<meta name="keywords" content="B44ner, Aashish Kumar Ray, developer portfolio, Python developer Delhi, web developer India, AI tools, digital architect, B44ner portfolio, B44ner developer" />
+<meta name="author" content="Aashish Kumar Ray" />
+<meta name="robots" content="index, follow" />
+<link rel="canonical" href="https://lively-halva-c71900.netlify.app/" />
+
+<!-- ═══════════════════════════════════════════════
+     SEO: Open Graph (Facebook, LinkedIn, Discord)
+═══════════════════════════════════════════════ -->
+<meta property="og:type" content="website" />
+<meta property="og:title" content="B44ner | Aashish Kumar Ray — Developer Portfolio" />
+<meta property="og:description" content="Python dev · Web builder · AI enthusiast. Building digital tools, bots, and cyberpunk web apps from Delhi, India." />
+<meta property="og:url" content="https://lively-halva-c71900.netlify.app/" />
+<meta property="og:image" content="https://lively-halva-c71900.netlify.app/og-image.png" />
+<meta property="og:site_name" content="B44ner" />
+<meta property="og:locale" content="en_IN" />
+
+<!-- ═══════════════════════════════════════════════
+     SEO: Twitter / X Card
+═══════════════════════════════════════════════ -->
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="B44ner | Aashish Kumar Ray — Developer Portfolio" />
+<meta name="twitter:description" content="Python dev · Web builder · AI enthusiast from Delhi, India." />
+<meta name="twitter:image" content="https://lively-halva-c71900.netlify.app/og-image.png" />
+
+<!-- ═══════════════════════════════════════════════
+     PERFORMANCE: Preconnect + font-display swap
+═══════════════════════════════════════════════ -->
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Orbitron:wght@400;700;900&family=Share+Tech+Mono&family=Rajdhani:wght@300;400;600;700&display=swap" rel="stylesheet" />
+
+<!-- ═══════════════════════════════════════════════
+     FAVICON (inline SVG fallback — replace with real .ico)
+═══════════════════════════════════════════════ -->
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚡</text></svg>" />
+
+<!-- ═══════════════════════════════════════════════
+     SEO: JSON-LD Structured Data (Person + Website)
+═══════════════════════════════════════════════ -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Person",
+      "@id": "https://lively-halva-c71900.netlify.app/#person",
+      "name": "Aashish Kumar Ray",
+      "alternateName": "B44ner",
+      "url": "https://lively-halva-c71900.netlify.app/",
+      "jobTitle": "Python Developer & Digital Architect",
+      "description": "18-year-old Python developer, web builder, and AI enthusiast from Delhi, India.",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Delhi",
+        "addressCountry": "IN"
+      },
+      "email": "Tech.aashish1277@gmail.com",
+      "sameAs": [
+        "https://t.me/TechTrovebyb44ner",
+        "https://b44ner.tech"
+      ],
+      "knowsAbout": ["Python", "Web Development", "AI Tools", "Digital Marketing", "Automation"]
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://lively-halva-c71900.netlify.app/#website",
+      "url": "https://lively-halva-c71900.netlify.app/",
+      "name": "B44ner Portfolio",
+      "description": "Portfolio of Aashish Kumar Ray — B44ner",
+      "author": { "@id": "https://lively-halva-c71900.netlify.app/#person" }
+    }
+  ]
+}
+</script>
 
 <style>
 /* ─── TOKENS ─── */
@@ -19,16 +95,13 @@
   --card:   rgba(0,119,255,.05);
   --border: rgba(0,119,255,.18);
   --text:   #0b1b2b;
-  --muted:  rgba(11,27,43,.45);
+  --muted:  rgba(11,27,43,.55); /* bumped from .45 for WCAG AA contrast */
 
-  /* spacing scale */
-  --s1: clamp(.5rem, 1vw, 1rem);
-  --s2: clamp(1rem,  2vw, 2rem);
-  --s3: clamp(2rem,  4vw, 4rem);
-  --s4: clamp(3rem,  6vw, 6rem);
-
-  /* section side padding */
-  --px: clamp(1.2rem, 5vw, 10%);
+  --s1: clamp(.5rem,1vw,1rem);
+  --s2: clamp(1rem,2vw,2rem);
+  --s3: clamp(2rem,4vw,4rem);
+  --s4: clamp(3rem,6vw,6rem);
+  --px: clamp(1.2rem,5vw,10%);
 }
 
 /* ─── RESET ─── */
@@ -37,6 +110,21 @@ html{scroll-behavior:smooth;font-size:16px;}
 body{font-family:'Rajdhani',sans-serif;background:var(--bg);color:var(--text);overflow-x:hidden;line-height:1.6;}
 img,svg{display:block;max-width:100%;}
 a{color:inherit;text-decoration:none;}
+
+/* ACCESSIBILITY: skip link */
+.skip-link{
+  position:absolute;top:-100%;left:1rem;z-index:10000;
+  background:var(--cyan);color:#fff;padding:.5rem 1rem;
+  font-family:'Share Tech Mono',monospace;font-size:.8rem;letter-spacing:2px;
+  border-radius:0 0 4px 4px;transition:top .2s;
+}
+.skip-link:focus{top:0;}
+
+/* ACCESSIBILITY: global focus ring */
+:focus-visible{
+  outline:2px solid var(--cyan);
+  outline-offset:3px;
+}
 
 /* ─── NOISE + SCANLINES ─── */
 #noise{position:fixed;inset:0;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.04'/%3E%3C/svg%3E");pointer-events:none;z-index:9999;opacity:.22;}
@@ -61,6 +149,7 @@ nav{
 .nav-links a{
   font-family:'Share Tech Mono',monospace;font-size:.72rem;letter-spacing:2px;
   color:var(--muted);text-transform:uppercase;transition:.25s;position:relative;
+  padding:.2rem 0; /* better touch target */
 }
 .nav-links a::after{
   content:'';position:absolute;bottom:-3px;left:0;right:0;height:1px;
@@ -69,10 +158,11 @@ nav{
 .nav-links a:hover{color:var(--cyan);}
 .nav-links a:hover::after{transform:scaleX(1);}
 
-/* hamburger — mobile */
+/* hamburger */
 .hamburger{
-  display:none;flex-direction:column;gap:5px;cursor:pointer;padding:4px;
-  background:none;border:none;
+  display:none;flex-direction:column;gap:5px;cursor:pointer;
+  padding:8px;background:none;border:none;
+  min-width:44px;min-height:44px;align-items:center;justify-content:center; /* touch target */
 }
 .hamburger span{
   display:block;width:22px;height:2px;
@@ -84,16 +174,18 @@ nav{
 
 /* mobile nav drawer */
 .mobile-nav{
-  display:none;position:fixed;inset:0;z-index:999;
+  position:fixed;inset:0;z-index:999;
   background:rgba(243,246,255,.97);backdrop-filter:blur(20px);
   flex-direction:column;align-items:center;justify-content:center;gap:2.5rem;
-  opacity:0;transform:translateY(-10px);transition:.35s;
-  pointer-events:none;
+  transition:opacity .35s, visibility .35s;
+  visibility:hidden;opacity:0;
+  display:flex; /* always flex, use visibility+opacity instead of display toggle */
 }
-.mobile-nav.open{display:flex;opacity:1;transform:translateY(0);pointer-events:auto;}
+.mobile-nav.open{visibility:visible;opacity:1;}
 .mobile-nav a{
   font-family:'Orbitron',sans-serif;font-size:1.4rem;letter-spacing:4px;
   color:var(--text);transition:.25s;
+  padding:.5rem 1rem;
 }
 .mobile-nav a:hover{color:var(--cyan);}
 
@@ -112,22 +204,25 @@ nav{
 }
 .hero-eyebrow::before{content:'[ ';color:var(--purple);}
 .hero-eyebrow::after{content:' ]';color:var(--purple);}
-.hero-name{
+
+/* ── H1 is now semantic ── */
+h1.hero-name{
   font-family:'Bebas Neue',sans-serif;
   font-size:clamp(3.5rem,11vw,10rem);
   line-height:.88;letter-spacing:3px;
   animation:fadeUp .8s .15s ease both;
 }
-.hero-name .line1{
+h1.hero-name .line1{
   display:block;color:transparent;
   -webkit-text-stroke:1.5px var(--cyan);
   filter:drop-shadow(0 0 20px rgba(0,119,255,.18));
 }
-.hero-name .line2{
+h1.hero-name .line2{
   display:block;
   background:linear-gradient(100deg,var(--cyan),var(--purple) 55%,var(--pink));
   -webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;
 }
+
 .hero-sub{
   margin-top:1.5rem;font-size:clamp(.9rem,1.4vw,1.1rem);color:var(--muted);
   font-family:'Share Tech Mono',monospace;letter-spacing:1px;line-height:1.8;
@@ -145,6 +240,7 @@ nav{
   border:none;color:#fff;font-weight:700;cursor:pointer;transition:.35s;
   clip-path:polygon(8px 0,100% 0,100% calc(100% - 8px),calc(100% - 8px) 100%,0 100%,0 8px);
   display:inline-flex;align-items:center;gap:.6rem;
+  min-height:44px; /* touch target */
 }
 .btn-primary:hover{filter:brightness(1.08);transform:translateY(-2px);box-shadow:0 10px 40px rgba(0,119,255,.25);}
 .btn-outline{
@@ -153,20 +249,20 @@ nav{
   border:1px solid var(--border);color:var(--cyan);cursor:pointer;transition:.35s;
   clip-path:polygon(8px 0,100% 0,100% calc(100% - 8px),calc(100% - 8px) 100%,0 100%,0 8px);
   display:inline-flex;align-items:center;gap:.6rem;
+  min-height:44px;
 }
 .btn-outline:hover{border-color:var(--cyan);background:rgba(0,119,255,.07);transform:translateY(-2px);}
 
-/* big decorative text — desktop only */
 .hero-deco{
   position:absolute;right:-2%;top:50%;transform:translateY(-50%);
   font-family:'Bebas Neue',sans-serif;font-size:clamp(6rem,16vw,18rem);
   color:transparent;-webkit-text-stroke:.5px rgba(0,119,255,.08);
   letter-spacing:8px;pointer-events:none;user-select:none;white-space:nowrap;
   animation:fadeUp 1s .6s ease both;
+  aria-hidden:true;
 }
 @media(max-width:768px){.hero-deco{display:none;}}
 
-/* scroll indicator */
 .scroll-hint{
   position:absolute;bottom:2rem;left:50%;transform:translateX(-50%);
   display:flex;flex-direction:column;align-items:center;gap:.4rem;
@@ -247,6 +343,7 @@ h2.sec-title .accent{color:transparent;-webkit-text-stroke:1px var(--cyan);}
   transition:.35s;
   clip-path:polygon(8px 0,100% 0,100% calc(100% - 8px),calc(100% - 8px) 100%,0 100%,0 8px);
   background:rgba(255,255,255,.7);
+  min-height:44px;
 }
 .tg-btn:hover{background:#229ed9;color:#fff;box-shadow:0 0 40px rgba(34,158,217,.2);}
 
@@ -256,7 +353,7 @@ h2.sec-title .accent{color:transparent;-webkit-text-stroke:1px var(--cyan);}
 }
 @media(max-width:768px){.about-strip{grid-template-columns:1fr;gap:1.8rem;}}
 .about-text p{
-  font-size:clamp(.95rem,1.2vw,1.05rem);color:rgba(11,27,43,.68);
+  font-size:clamp(.95rem,1.2vw,1.05rem);color:rgba(11,27,43,.70);
   line-height:1.85;margin-bottom:1rem;
 }
 .about-text p strong{color:var(--cyan);}
@@ -268,7 +365,7 @@ h2.sec-title .accent{color:transparent;-webkit-text-stroke:1px var(--cyan);}
   transition:.3s;
 }
 .qf-item:hover{border-left-color:var(--purple);background:rgba(0,119,255,.04);}
-.qf-item i{color:var(--cyan);font-size:1rem;width:1.2rem;text-align:center;}
+.qf-item .qf-icon{color:var(--cyan);font-size:1rem;width:1.2rem;text-align:center;flex-shrink:0;}
 .qf-item span{font-size:.95rem;color:var(--text);font-weight:500;}
 
 /* ─── SKILLS ─── */
@@ -293,7 +390,7 @@ h2.sec-title .accent{color:transparent;-webkit-text-stroke:1px var(--cyan);}
 .skill-card:hover .skill-icon{transform:scale(1.15) rotate(-5deg);}
 .skill-icon{font-size:2rem;margin-bottom:.9rem;display:block;transition:.4s;}
 .skill-name{font-family:'Orbitron',sans-serif;font-size:.82rem;letter-spacing:1px;color:var(--text);margin-bottom:.5rem;font-weight:700;}
-.skill-desc{font-size:.87rem;color:rgba(11,27,43,.58);line-height:1.6;}
+.skill-desc{font-size:.87rem;color:rgba(11,27,43,.60);line-height:1.6;}
 .skill-tag{
   display:inline-block;margin-top:.8rem;
   font-family:'Share Tech Mono',monospace;font-size:.65rem;letter-spacing:1px;
@@ -316,14 +413,20 @@ h2.sec-title .accent{color:transparent;-webkit-text-stroke:1px var(--cyan);}
   transition:.3s;background:rgba(255,255,255,.6);
 }
 .contact-item:hover{border-color:var(--cyan);padding-left:1.3rem;background:rgba(0,119,255,.04);}
-.contact-item i{color:var(--cyan);width:1.2rem;text-align:center;font-size:.95rem;}
-.contact-item a,.contact-item span{color:rgba(11,27,43,.72);font-size:.95rem;transition:.25s;word-break:break-all;}
-.contact-item:hover a,.contact-item:hover span{color:var(--cyan);}
+.contact-item .ci-icon{color:var(--cyan);width:1.2rem;text-align:center;font-size:.95rem;flex-shrink:0;}
+.contact-item a,.contact-item address{
+  color:rgba(11,27,43,.72);font-size:.95rem;transition:.25s;word-break:break-all;
+  font-style:normal; /* remove address italics */
+}
+.contact-item:hover a,.contact-item:hover address{color:var(--cyan);}
 .contact-note{margin-top:1.5rem;font-family:'Share Tech Mono',monospace;font-size:.72rem;color:var(--muted);line-height:1.9;letter-spacing:1px;}
 
 /* form */
 .contact-form{display:flex;flex-direction:column;gap:1.1rem;}
-.form-label{font-family:'Share Tech Mono',monospace;font-size:.68rem;letter-spacing:2px;color:var(--purple);margin-bottom:.4rem;display:block;}
+.form-label{
+  font-family:'Share Tech Mono',monospace;font-size:.68rem;letter-spacing:2px;
+  color:var(--purple);margin-bottom:.4rem;display:block;
+}
 .form-input{
   width:100%;padding:.85rem 1rem;background:rgba(255,255,255,.85);
   border:1px solid var(--border);color:var(--text);
@@ -339,6 +442,7 @@ textarea.form-input{min-height:120px;resize:vertical;}
   padding:1rem;background:linear-gradient(90deg,var(--cyan),var(--purple));
   border:none;color:#fff;font-weight:700;cursor:pointer;transition:.4s;
   clip-path:polygon(8px 0,100% 0,100% calc(100% - 8px),calc(100% - 8px) 100%,0 100%,0 8px);
+  min-height:44px;
 }
 .submit-btn:hover{filter:brightness(1.06);transform:translateY(-2px);box-shadow:0 10px 40px rgba(0,119,255,.22);}
 .msg-status{
@@ -356,11 +460,14 @@ footer{
   display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:1.2rem;
   background:rgba(255,255,255,.8);
 }
-.footer-left .footer-logo{font-family:'Bebas Neue',sans-serif;font-size:2rem;letter-spacing:6px;color:transparent;-webkit-text-stroke:1px rgba(0,119,255,.25);}
+.footer-left .footer-logo{
+  font-family:'Bebas Neue',sans-serif;font-size:2rem;letter-spacing:6px;
+  color:transparent;-webkit-text-stroke:1px rgba(0,119,255,.25);
+}
 .footer-left p{font-family:'Share Tech Mono',monospace;font-size:.68rem;letter-spacing:1.5px;color:var(--muted);margin-top:.3rem;}
 .footer-links{display:flex;gap:1.2rem;}
 .footer-links a{
-  width:38px;height:38px;border:1px solid var(--border);
+  width:44px;height:44px;border:1px solid var(--border);
   display:flex;align-items:center;justify-content:center;
   color:var(--muted);font-size:.95rem;transition:.3s;
   clip-path:polygon(5px 0,100% 0,100% calc(100% - 5px),calc(100% - 5px) 100%,0 100%,0 5px);
@@ -397,371 +504,475 @@ footer{
 
 /* ─── PROGRESS BAR ─── */
 #progress{position:fixed;top:0;left:0;height:2px;background:linear-gradient(90deg,var(--cyan),var(--purple));z-index:9999;transition:width .1s;}
+
+/* ─── INLINE SVG ICONS (replaces Font Awesome for perf) ─── */
+.icon{display:inline-block;width:1em;height:1em;vertical-align:middle;fill:currentColor;flex-shrink:0;}
+
+/* ─── REDUCED MOTION ─── */
+@media(prefers-reduced-motion:reduce){
+  *{animation-duration:.01ms !important;animation-iteration-count:1 !important;transition-duration:.01ms !important;}
+  .reveal{opacity:1;transform:none;}
+}
+
+/* ─── MOBILE NAV ─── */
+@media(max-width:768px){
+  .nav-links{display:none;}
+  .hamburger{display:flex;}
+}
 </style>
 </head>
 
 <body>
-<div id="noise"></div>
-<div id="progress"></div>
-<canvas id="bgCanvas"></canvas>
+<!-- ACCESSIBILITY: skip to main content -->
+<a class="skip-link" href="#main-content">Skip to main content</a>
+
+<div id="noise" aria-hidden="true"></div>
+<div id="progress" aria-hidden="true" role="progressbar" aria-label="Page scroll progress"></div>
+<canvas id="bgCanvas" aria-hidden="true"></canvas>
 
 <!-- ══ NAV ══ -->
-<nav id="mainNav">
-  <a class="nav-logo" href="#hero">B44NER</a>
-  <ul class="nav-links" id="navLinks">
+<nav id="mainNav" aria-label="Main navigation">
+  <a class="nav-logo" href="#hero" aria-label="B44ner — home">B44NER</a>
+  <ul class="nav-links" id="navLinks" role="list">
     <li><a href="#identity">Identity</a></li>
     <li><a href="#about">About</a></li>
     <li><a href="#skills">Skills</a></li>
     <li><a href="#contact">Contact</a></li>
   </ul>
-  <button class="hamburger" id="hamburger" aria-label="Menu">
-    <span></span><span></span><span></span>
+  <button class="hamburger" id="hamburger" aria-label="Open navigation menu" aria-expanded="false" aria-controls="mobileNav">
+    <span aria-hidden="true"></span>
+    <span aria-hidden="true"></span>
+    <span aria-hidden="true"></span>
   </button>
 </nav>
 
 <!-- Mobile drawer -->
-<div class="mobile-nav" id="mobileNav">
+<div class="mobile-nav" id="mobileNav" aria-hidden="true" role="dialog" aria-label="Mobile navigation">
   <a href="#identity" class="mob-link">Identity</a>
   <a href="#about" class="mob-link">About</a>
   <a href="#skills" class="mob-link">Skills</a>
   <a href="#contact" class="mob-link">Contact</a>
 </div>
 
+<!-- ══ MAIN CONTENT ══ -->
+<main id="main-content">
+
 <!-- ══ HERO ══ -->
-<section id="hero">
+<section id="hero" aria-labelledby="hero-heading">
   <div class="hero-inner">
-    <div class="hero-eyebrow">DIGITAL ARCHITECT</div>
-    <div class="hero-name">
+    <p class="hero-eyebrow">DIGITAL ARCHITECT</p>
+    <!-- SEO: single H1 on the page -->
+    <h1 class="hero-name" id="hero-heading">
       <span class="line1">AASHISH</span>
       <span class="line2">KUMAR RAY</span>
-    </div>
+    </h1>
     <p class="hero-sub">
       Python dev · Web builder · AI enthusiast<br>
-      <span>Agniveer aspirant</span> · DU SOL · Delhi, India
+      DU SOL · Delhi, India
     </p>
     <div class="hero-ctas">
-      <a href="#contact" class="btn-primary"><i class="fas fa-satellite-dish"></i> CONTACT ME</a>
-      <a href="#skills" class="btn-outline"><i class="fas fa-code"></i> VIEW SKILLS</a>
+      <a href="#contact" class="btn-primary">
+        <!-- inline SVG: satellite dish -->
+        <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M4.5 6.375a4.125 4.125 0 118.25 0 4.125 4.125 0 01-8.25 0zM14.25 8.625a3.375 3.375 0 116.75 0 3.375 3.375 0 01-6.75 0zM1.5 19.125a7.125 7.125 0 0114.212-1.857l-.033.001A5.625 5.625 0 0119.5 21.75H5.25a3.75 3.75 0 01-3.75-3.75v-.375z"/></svg>
+        CONTACT ME
+      </a>
+      <a href="#skills" class="btn-outline">
+        <!-- inline SVG: code brackets -->
+        <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M14.447 3.027a.75.75 0 01.527.92l-4.5 16.5a.75.75 0 01-1.448-.394l4.5-16.5a.75.75 0 01.921-.526zM16.72 6.22a.75.75 0 011.06 0l5.25 5.25a.75.75 0 010 1.06l-5.25 5.25a.75.75 0 11-1.06-1.06L21.44 12l-4.72-4.72a.75.75 0 010-1.06zm-9.44 0a.75.75 0 010 1.06L2.56 12l4.72 4.72a.75.75 0 11-1.06 1.06L.97 12.53a.75.75 0 010-1.06l5.25-5.25a.75.75 0 011.06 0z" clip-rule="evenodd"/></svg>
+        VIEW SKILLS
+      </a>
     </div>
-    <a href="https://t.me/TechTrovebyb44ner" target="_blank" class="tg-btn" style="margin-top:1.5rem;">
-      <i class="fab fa-telegram-plane"></i> t.me/TechTrovebyb44ner
+    <a href="https://t.me/TechTrovebyb44ner" target="_blank" rel="noopener noreferrer" class="tg-btn" style="margin-top:1.5rem;" aria-label="Join Tech Trove on Telegram">
+      <!-- inline SVG: paper plane -->
+      <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M22 2L11 13M22 2l-7 20-4-9-9-4 20-7z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg>
+      t.me/TechTrovebyb44ner
     </a>
   </div>
-  <div class="hero-deco">B44NER</div>
-  <div class="scroll-hint">
+  <p class="hero-deco" aria-hidden="true">B44NER</p>
+  <div class="scroll-hint" aria-hidden="true">
     <span>SCROLL</span>
     <div class="scroll-line"></div>
   </div>
 </section>
 
-<div class="divider"></div>
+<div class="divider" role="separator" aria-hidden="true"></div>
 
 <!-- ══ IDENTITY ══ -->
-<section class="panel" id="identity">
+<section class="panel" id="identity" aria-labelledby="identity-heading">
   <span class="section-tag reveal">PERSONAL DATA</span>
-  <h2 class="sec-title reveal">IDENTITY <span class="accent">MATRIX</span></h2>
-  <div class="sec-line reveal"></div>
+  <h2 class="sec-title reveal" id="identity-heading">IDENTITY <span class="accent">MATRIX</span></h2>
+  <div class="sec-line reveal" aria-hidden="true"></div>
 
-  <div class="id-grid reveal">
-    <div class="id-cell">
-      <i class="fas fa-fingerprint id-icon"></i>
+  <div class="id-grid reveal" role="list" aria-label="Personal information">
+    <div class="id-cell" role="listitem">
+      <svg class="icon id-icon" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M12 1.5a5.25 5.25 0 00-5.25 5.25c0 .907.116 1.787.334 2.625H5.25a.75.75 0 000 1.5h1.834a10.5 10.5 0 01-.084 1.02 12.024 12.024 0 01-1.8 5.042.75.75 0 001.26.816 13.519 13.519 0 002.024-5.667 9.12 9.12 0 00.066-.891 5.25 5.25 0 006.9 0c.024.297.043.595.066.891a13.519 13.519 0 002.024 5.667.75.75 0 101.26-.816 12.024 12.024 0 01-1.8-5.042 10.5 10.5 0 01-.084-1.02h1.834a.75.75 0 000-1.5h-1.834A10.495 10.495 0 0017.25 6.75 5.25 5.25 0 0012 1.5zm0 1.5a3.75 3.75 0 013.75 3.75c0 .414-.034.82-.1 1.215a3.75 3.75 0 01-7.3 0A8.978 8.978 0 018.25 6.75 3.75 3.75 0 0112 3z" clip-rule="evenodd"/></svg>
       <div><div class="id-label">Designation</div><div class="id-value">Aashish Kumar Ray</div></div>
     </div>
-    <div class="id-cell">
-      <i class="fas fa-calendar-alt id-icon"></i>
+    <div class="id-cell" role="listitem">
+      <svg class="icon id-icon" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M6.75 2.25A.75.75 0 017.5 3v1.5h9V3A.75.75 0 0118 3v1.5h.75a3 3 0 013 3v11.25a3 3 0 01-3 3H5.25a3 3 0 01-3-3V7.5a3 3 0 013-3H6V3a.75.75 0 01.75-.75zm13.5 9a1.5 1.5 0 00-1.5-1.5H5.25a1.5 1.5 0 00-1.5 1.5v7.5a1.5 1.5 0 001.5 1.5h13.5a1.5 1.5 0 001.5-1.5v-7.5z" clip-rule="evenodd"/></svg>
       <div><div class="id-label">Date of Birth</div><div class="id-value">12 July 2007</div></div>
     </div>
-    <div class="id-cell">
-      <i class="fas fa-hourglass-half id-icon"></i>
+    <div class="id-cell" role="listitem">
+      <svg class="icon id-icon" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M12 2.25c-5.385 0-9.75 4.365-9.75 9.75s4.365 9.75 9.75 9.75 9.75-4.365 9.75-9.75S17.385 2.25 12 2.25zM12.75 6a.75.75 0 00-1.5 0v6c0 .414.336.75.75.75h4.5a.75.75 0 000-1.5h-3.75V6z" clip-rule="evenodd"/></svg>
       <div><div class="id-label">Age</div><div class="id-value">18 Years Old</div></div>
     </div>
-    <div class="id-cell">
-      <i class="fas fa-om id-icon"></i>
+    <div class="id-cell" role="listitem">
+      <span class="id-icon" aria-hidden="true" style="font-size:1.4rem;font-family:serif;">ॐ</span>
       <div><div class="id-label">Religion</div><div class="id-value">Hindu</div></div>
     </div>
-    <div class="id-cell">
-      <i class="fas fa-map-marked-alt id-icon"></i>
+    <div class="id-cell" role="listitem">
+      <svg class="icon id-icon" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M11.54 22.351l.07.04.028.016a.76.76 0 00.723 0l.028-.015.071-.041a16.975 16.975 0 001.144-.742 19.58 19.58 0 002.683-2.282c1.944-2.003 3.5-4.697 3.5-8.327a8.25 8.25 0 00-16.5 0c0 3.63 1.556 6.324 3.5 8.327a19.58 19.58 0 002.683 2.282 16.975 16.975 0 001.144.742zM12 13.5a3 3 0 100-6 3 3 0 000 6z" clip-rule="evenodd"/></svg>
       <div><div class="id-label">Location</div><div class="id-value">Delhi, India</div></div>
     </div>
-    <div class="id-cell">
-      <i class="fas fa-envelope id-icon"></i>
+    <div class="id-cell" role="listitem">
+      <svg class="icon id-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M1.5 8.67v8.58a3 3 0 003 3h15a3 3 0 003-3V8.67l-8.928 5.493a3 3 0 01-3.144 0L1.5 8.67z"/><path d="M22.5 6.908V6.75a3 3 0 00-3-3h-15a3 3 0 00-3 3v.158l9.714 5.978a1.5 1.5 0 001.572 0L22.5 6.908z"/></svg>
       <div><div class="id-label">Email</div><div class="id-value">Tech.aashish1277@gmail.com</div></div>
     </div>
-    <div class="id-cell">
-      <i class="fas fa-graduation-cap id-icon"></i>
+    <div class="id-cell" role="listitem">
+      <svg class="icon id-icon" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M11.7 2.805a.75.75 0 01.6 0A60.65 60.65 0 0122.83 8.72a.75.75 0 01-.231 1.337 49.949 49.949 0 00-9.902 3.912l-.003.002-.34.18a.75.75 0 01-.707 0A50.009 50.009 0 007.5 12.174v-.224c0-.131.067-.248.172-.311a54.614 54.614 0 014.653-2.52.75.75 0 00-.65-1.352 56.129 56.129 0 00-4.78 2.589 1.858 1.858 0 00-.859 1.228 49.803 49.803 0 00-4.634-1.527.75.75 0 01-.231-1.337A60.653 60.653 0 0111.7 2.805z" clip-rule="evenodd"/><path fill-rule="evenodd" d="M13.06 15.473a48.45 48.45 0 017.666-3.282c.134 1.414.22 2.843.255 4.285a.75.75 0 01-.46.711 47.87 47.87 0 00-8.105 4.342.75.75 0 01-.832 0 47.87 47.87 0 00-8.104-4.342.75.75 0 01-.461-.71c.035-1.442.121-2.87.255-4.286A48.4 48.4 0 016 13.18v1.27a1.5 1.5 0 00-.14 2.508c-.09.38-.222.753-.397 1.11.452.213.901.434 1.346.661a6.729 6.729 0 00.551-1.608 1.5 1.5 0 00.14-2.67v-.645a48.549 48.549 0 013.44 1.668 2.25 2.25 0 002.12 0z" clip-rule="evenodd"/></svg>
       <div><div class="id-label">Schooling</div><div class="id-value">12th Arts · 2024</div></div>
     </div>
-    <div class="id-cell">
-      <i class="fas fa-university id-icon"></i>
+    <div class="id-cell" role="listitem">
+      <svg class="icon id-icon" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M4.5 3.75a3 3 0 00-3 3v10.5a3 3 0 003 3h15a3 3 0 003-3V6.75a3 3 0 00-3-3h-15zm4.125 3a2.25 2.25 0 100 4.5 2.25 2.25 0 000-4.5zm-3.873 8.703a4.126 4.126 0 017.746 0 .75.75 0 01-.351.92 7.47 7.47 0 01-3.522.877 7.47 7.47 0 01-3.522-.877.75.75 0 01-.351-.92zM15 8.25a.75.75 0 000 1.5h3.75a.75.75 0 000-1.5H15zM14.25 12a.75.75 0 01.75-.75h3.75a.75.75 0 010 1.5H15a.75.75 0 01-.75-.75zm.75 2.25a.75.75 0 000 1.5h3.75a.75.75 0 000-1.5H15z" clip-rule="evenodd"/></svg>
       <div><div class="id-label">College</div><div class="id-value">DU SOL · Delhi University</div></div>
     </div>
   </div>
 
   <div class="stats-row reveal">
     <div class="stat-box">
-      <div class="stat-num">18</div>
+      <div class="stat-num" aria-label="18 years old">18</div>
       <div class="stat-label">YEARS OLD</div>
     </div>
     <div class="stat-box">
-      <div class="stat-num">2024</div>
+      <div class="stat-num" aria-label="Batch year 2024">2024</div>
       <div class="stat-label">BATCH YEAR</div>
     </div>
     <div class="stat-box">
-      <div class="stat-num">∞</div>
+      <div class="stat-num" aria-label="Unlimited ambition">∞</div>
       <div class="stat-label">AMBITION</div>
     </div>
     <div class="stat-box">
-      <div class="stat-num">01</div>
-      <div class="stat-label">GOAL · AGNIVEER</div>
+      <div class="stat-num" aria-label="One goal">01</div>
+      <div class="stat-label">GOAL · BUILDER</div>
     </div>
   </div>
 </section>
 
-<div class="divider"></div>
+<div class="divider" role="separator" aria-hidden="true"></div>
 
 <!-- ══ ABOUT ══ -->
-<section class="panel" id="about">
+<section class="panel" id="about" aria-labelledby="about-heading">
   <span class="section-tag reveal">WHO AM I</span>
-  <h2 class="sec-title reveal">OPERATOR <span class="accent">FILE</span></h2>
-  <div class="sec-line reveal"></div>
+  <h2 class="sec-title reveal" id="about-heading">OPERATOR <span class="accent">FILE</span></h2>
+  <div class="sec-line reveal" aria-hidden="true"></div>
 
   <div class="about-strip">
     <div class="about-text reveal">
       <p>I'm an 18-year-old tech builder from <strong>Delhi, India</strong>, deeply wired into the world of code, AI, and digital creation. Whether it's a Python terminal tool, a cyberpunk-styled web app, or an AI-powered workflow — I build things that actually work.</p>
-      <p>Currently on a focused mission: <strong>Agniveer Indian Navy</strong> selection while simultaneously expanding my skills in product management, prompt engineering, and digital marketing.</p>
+      <p>Currently expanding my skills in product management, prompt engineering, and digital marketing — building things that make a difference.</p>
       <p>I run a Telegram channel — <strong>Tech Trove</strong> — where I share tools, tips, and discoveries at the intersection of AI and practical tech.</p>
-      <a href="https://t.me/TechTrovebyb44ner" target="_blank" class="tg-btn" style="margin-top:1.2rem;">
-        <i class="fab fa-telegram-plane"></i> JOIN TECH TROVE
+      <a href="https://t.me/TechTrovebyb44ner" target="_blank" rel="noopener noreferrer" class="tg-btn" style="margin-top:1.2rem;" aria-label="Join Tech Trove Telegram channel">
+        <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M22 2L11 13M22 2l-7 20-4-9-9-4 20-7z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg>
+        JOIN TECH TROVE
       </a>
     </div>
-    <div class="quick-facts reveal reveal-delay-2">
-      <div class="qf-item"><i class="fas fa-running"></i><span>Running 1600m · Agniveer Physical Prep</span></div>
-      <div class="qf-item"><i class="fas fa-brain"></i><span>AI & Prompt Engineering · Claude, Leonardo AI</span></div>
-      <div class="qf-item"><i class="fas fa-code"></i><span>Python · HTML/CSS/JS · React (basics)</span></div>
-      <div class="qf-item"><i class="fas fa-robot"></i><span>Automation · Bots · Workflow Tools</span></div>
-      <div class="qf-item"><i class="fas fa-chart-line"></i><span>Digital Marketing · Real Estate Niche</span></div>
-      <div class="qf-item"><i class="fas fa-moon"></i><span>4 AM runner · Coconut water + electrolytes</span></div>
-    </div>
+    <ul class="quick-facts reveal reveal-delay-2" role="list" aria-label="Quick facts about Aashish">
+      <li class="qf-item">
+        <svg class="icon qf-icon" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M11.97 1.515a.75.75 0 01.162.838A7.97 7.97 0 009.5 8.25c0 2.09.8 3.99 2.104 5.416a.75.75 0 01-.96 1.152A9.47 9.47 0 017.5 8.25a9.47 9.47 0 011.435-5.042.75.75 0 011.035-.693zm4.846.805a.75.75 0 01.957.318 9.47 9.47 0 011.227 4.687c0 2.34-.847 4.48-2.244 6.137a.75.75 0 11-1.152-.96A7.97 7.97 0 0017.25 7.5a7.97 7.97 0 00-1.006-3.872.75.75 0 01.318-.958z" clip-rule="evenodd"/><path fill-rule="evenodd" d="M9 12.75a3.75 3.75 0 100 7.5 3.75 3.75 0 000-7.5zM3.75 16.5a5.25 5.25 0 1110.5 0 5.25 5.25 0 01-10.5 0z" clip-rule="evenodd"/></svg>
+        <span>Daily discipline · Early morning training</span>
+      </li>
+      <li class="qf-item">
+        <svg class="icon qf-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a2 2 0 110 4 2 2 0 010-4zm9 7h-6v13h-2v-6h-2v6H9V9H3V7h18v2z"/></svg>
+        <span>AI &amp; Prompt Engineering · Claude, Leonardo AI</span>
+      </li>
+      <li class="qf-item">
+        <svg class="icon qf-icon" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M14.447 3.027a.75.75 0 01.527.92l-4.5 16.5a.75.75 0 01-1.448-.394l4.5-16.5a.75.75 0 01.921-.526zM16.72 6.22a.75.75 0 011.06 0l5.25 5.25a.75.75 0 010 1.06l-5.25 5.25a.75.75 0 11-1.06-1.06L21.44 12l-4.72-4.72a.75.75 0 010-1.06zm-9.44 0a.75.75 0 010 1.06L2.56 12l4.72 4.72a.75.75 0 11-1.06 1.06L.97 12.53a.75.75 0 010-1.06l5.25-5.25a.75.75 0 011.06 0z" clip-rule="evenodd"/></svg>
+        <span>Python · HTML/CSS/JS · React (basics)</span>
+      </li>
+      <li class="qf-item">
+        <svg class="icon qf-icon" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M11.078 2.25c-.917 0-1.699.663-1.85 1.567L9.05 4.889c-.02.12-.115.26-.297.348a7.493 7.493 0 00-.986.57c-.166.115-.334.126-.45.083L6.3 5.508a1.875 1.875 0 00-2.282.819l-.922 1.597a1.875 1.875 0 00.432 2.385l.84.692c.095.078.17.229.154.43a7.598 7.598 0 000 1.139c.015.2-.059.352-.153.43l-.841.692a1.875 1.875 0 00-.432 2.385l.922 1.597a1.875 1.875 0 002.282.818l1.019-.382c.115-.043.283-.031.45.082.312.214.641.405.985.57.182.088.277.228.297.35l.178 1.071c.151.904.933 1.567 1.85 1.567h1.844c.916 0 1.699-.663 1.85-1.567l.178-1.072c.02-.12.114-.26.297-.349.344-.165.673-.356.985-.57.167-.114.335-.125.45-.082l1.02.382a1.875 1.875 0 002.28-.819l.923-1.597a1.875 1.875 0 00-.432-2.385l-.84-.692c-.095-.078-.17-.229-.154-.43a7.614 7.614 0 000-1.139c-.016-.2.059-.352.153-.43l.84-.692c.708-.582.891-1.59.433-2.385l-.922-1.597a1.875 1.875 0 00-2.282-.818l-1.02.382c-.114.043-.282.031-.449-.083a7.49 7.49 0 00-.985-.57c-.183-.087-.277-.227-.297-.348l-.179-1.072a1.875 1.875 0 00-1.85-1.567h-1.843zM12 15.75a3.75 3.75 0 100-7.5 3.75 3.75 0 000 7.5z" clip-rule="evenodd"/></svg>
+        <span>Automation · Bots · Workflow Tools</span>
+      </li>
+      <li class="qf-item">
+        <svg class="icon qf-icon" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M2.25 13.5a8.25 8.25 0 018.25-8.25.75.75 0 01.75.75v6.75H18a.75.75 0 01.75.75 8.25 8.25 0 01-16.5 0z" clip-rule="evenodd"/><path fill-rule="evenodd" d="M12.75 3a.75.75 0 01.75-.75 8.25 8.25 0 018.25 8.25.75.75 0 01-.75.75h-7.5a.75.75 0 01-.75-.75V3z" clip-rule="evenodd"/></svg>
+        <span>Digital Marketing · Real Estate Niche</span>
+      </li>
+      <li class="qf-item">
+        <svg class="icon qf-icon" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M9.528 1.718a.75.75 0 01.162.819A8.97 8.97 0 009 6a9 9 0 009 9 8.97 8.97 0 003.463-.69.75.75 0 01.981.98 10.503 10.503 0 01-9.694 6.46c-5.799 0-10.5-4.701-10.5-10.5 0-4.368 2.667-8.112 6.46-9.694a.75.75 0 01.818.162z" clip-rule="evenodd"/></svg>
+        <span>4 AM runner · Coconut water + electrolytes</span>
+      </li>
+    </ul>
   </div>
 </section>
 
-<div class="divider"></div>
+<div class="divider" role="separator" aria-hidden="true"></div>
 
 <!-- ══ SKILLS ══ -->
-<section class="panel" id="skills">
+<section class="panel" id="skills" aria-labelledby="skills-heading">
   <span class="section-tag reveal">CAPABILITIES</span>
-  <h2 class="sec-title reveal">SKILL <span class="accent">SET</span></h2>
-  <div class="sec-line reveal"></div>
+  <h2 class="sec-title reveal" id="skills-heading">SKILL <span class="accent">SET</span></h2>
+  <div class="sec-line reveal" aria-hidden="true"></div>
 
   <div class="skills-wrap">
-    <div class="skill-card reveal">
-      <span class="skill-icon">⌨</span>
-      <div class="skill-name">PYTHON DEV</div>
-      <div class="skill-desc">Terminal tools, automation scripts, Instagram bots, APK packaging pipelines, PDF generators.</div>
+    <article class="skill-card reveal" aria-label="Python Development skill">
+      <span class="skill-icon" aria-hidden="true">⌨</span>
+      <h3 class="skill-name">PYTHON DEV</h3>
+      <p class="skill-desc">Terminal tools, automation scripts, Instagram bots, APK packaging pipelines, PDF generators.</p>
       <span class="skill-tag">INTERMEDIATE</span>
-    </div>
-    <div class="skill-card reveal reveal-delay-1">
-      <span class="skill-icon">🌐</span>
-      <div class="skill-name">WEB DEVELOPMENT</div>
-      <div class="skill-desc">Full single-file HTML/CSS/JS apps with cyberpunk aesthetics, animations & custom UI.</div>
+    </article>
+    <article class="skill-card reveal reveal-delay-1" aria-label="Web Development skill">
+      <span class="skill-icon" aria-hidden="true">🌐</span>
+      <h3 class="skill-name">WEB DEVELOPMENT</h3>
+      <p class="skill-desc">Full single-file HTML/CSS/JS apps with cyberpunk aesthetics, animations &amp; custom UI.</p>
       <span class="skill-tag">INTERMEDIATE</span>
-    </div>
-    <div class="skill-card reveal reveal-delay-2">
-      <span class="skill-icon">📈</span>
-      <div class="skill-name">DIGITAL MARKETING</div>
-      <div class="skill-desc">AI-powered content strategy, social media automation, real estate & client outreach.</div>
+    </article>
+    <article class="skill-card reveal reveal-delay-2" aria-label="Digital Marketing skill">
+      <span class="skill-icon" aria-hidden="true">📈</span>
+      <h3 class="skill-name">DIGITAL MARKETING</h3>
+      <p class="skill-desc">AI-powered content strategy, social media automation, real estate &amp; client outreach.</p>
       <span class="skill-tag">LEARNING</span>
-    </div>
-    <div class="skill-card reveal reveal-delay-3">
-      <span class="skill-icon">🧠</span>
-      <div class="skill-name">AI & TOOLS</div>
-      <div class="skill-desc">Claude, Leonardo AI, Canva, Make.com, Buffer — full AI workflow integration.</div>
+    </article>
+    <article class="skill-card reveal reveal-delay-3" aria-label="AI and Tools skill">
+      <span class="skill-icon" aria-hidden="true">🧠</span>
+      <h3 class="skill-name">AI &amp; TOOLS</h3>
+      <p class="skill-desc">Claude, Leonardo AI, Canva, Make.com, Buffer — full AI workflow integration.</p>
       <span class="skill-tag">PROFICIENT</span>
-    </div>
-    <div class="skill-card reveal reveal-delay-1">
-      <span class="skill-icon">🎮</span>
-      <div class="skill-name">GAMIFICATION</div>
-      <div class="skill-desc">RPG-style life tracking apps with XP, ranks, quests, and real-time AI quest generation.</div>
+    </article>
+    <article class="skill-card reveal reveal-delay-1" aria-label="Gamification skill">
+      <span class="skill-icon" aria-hidden="true">🎮</span>
+      <h3 class="skill-name">GAMIFICATION</h3>
+      <p class="skill-desc">RPG-style life tracking apps with XP, ranks, quests, and real-time AI quest generation.</p>
       <span class="skill-tag">BUILDING</span>
-    </div>
-    <div class="skill-card reveal reveal-delay-2">
-      <span class="skill-icon">⚔</span>
-      <div class="skill-name">AGNIVEER PREP</div>
-      <div class="skill-desc">Written exam & physical training. Discipline, GK, Reasoning, Maths. Never stopping.</div>
-      <span class="skill-tag">ACTIVE</span>
-    </div>
+    </article>
   </div>
 </section>
 
-<div class="divider"></div>
+<div class="divider" role="separator" aria-hidden="true"></div>
 
 <!-- ══ CONTACT ══ -->
-<section class="panel" id="contact">
+<section class="panel" id="contact" aria-labelledby="contact-heading">
   <span class="section-tag reveal">COMMUNICATION LINK</span>
-  <h2 class="sec-title reveal">CONTACT <span class="accent">PROTOCOL</span></h2>
-  <div class="sec-line reveal"></div>
+  <h2 class="sec-title reveal" id="contact-heading">CONTACT <span class="accent">PROTOCOL</span></h2>
+  <div class="sec-line reveal" aria-hidden="true"></div>
 
   <div class="contact-grid">
     <div class="contact-info reveal">
       <h3>ESTABLISH<br>CONNECTION</h3>
-      <div class="contact-item">
-        <i class="fas fa-envelope"></i>
-        <a href="mailto:Tech.aashish1277@gmail.com">Tech.aashish1277@gmail.com</a>
-      </div>
-      <div class="contact-item">
-        <i class="fab fa-telegram"></i>
-        <a href="https://t.me/TechTrovebyb44ner" target="_blank">t.me/TechTrovebyb44ner</a>
-      </div>
-      <div class="contact-item">
-        <i class="fas fa-map-marker-alt"></i>
-        <span>Delhi, India</span>
-      </div>
-      <div class="contact-item">
-        <i class="fas fa-globe"></i>
-        <a href="https://b44ner.tech" target="_blank">b44ner.tech</a>
-      </div>
+      <address>
+        <div class="contact-item">
+          <svg class="icon ci-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M1.5 8.67v8.58a3 3 0 003 3h15a3 3 0 003-3V8.67l-8.928 5.493a3 3 0 01-3.144 0L1.5 8.67z"/><path d="M22.5 6.908V6.75a3 3 0 00-3-3h-15a3 3 0 00-3 3v.158l9.714 5.978a1.5 1.5 0 001.572 0L22.5 6.908z"/></svg>
+          <a href="mailto:Tech.aashish1277@gmail.com" aria-label="Send email to Aashish">Tech.aashish1277@gmail.com</a>
+        </div>
+        <div class="contact-item">
+          <svg class="icon ci-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M22 2L11 13M22 2l-7 20-4-9-9-4 20-7z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg>
+          <a href="https://t.me/TechTrovebyb44ner" target="_blank" rel="noopener noreferrer" aria-label="Join Telegram channel">t.me/TechTrovebyb44ner</a>
+        </div>
+        <div class="contact-item">
+          <svg class="icon ci-icon" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M11.54 22.351l.07.04.028.016a.76.76 0 00.723 0l.028-.015.071-.041a16.975 16.975 0 001.144-.742 19.58 19.58 0 002.683-2.282c1.944-2.003 3.5-4.697 3.5-8.327a8.25 8.25 0 00-16.5 0c0 3.63 1.556 6.324 3.5 8.327a19.58 19.58 0 002.683 2.282 16.975 16.975 0 001.144.742zM12 13.5a3 3 0 100-6 3 3 0 000 6z" clip-rule="evenodd"/></svg>
+          <address>Delhi, India</address>
+        </div>
+        <div class="contact-item">
+          <svg class="icon ci-icon" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M12 2.25c-5.385 0-9.75 4.365-9.75 9.75s4.365 9.75 9.75 9.75 9.75-4.365 9.75-9.75S17.385 2.25 12 2.25zM6.262 6.072a8.25 8.25 0 1010.562-.766 4.5 4.5 0 01-1.318 1.357L14.25 7.5l.165.33a.809.809 0 01-1.086 1.085l-.604-.302a1.125 1.125 0 00-1.298.21l-.132.131c-.439.44-.439 1.152 0 1.591l.296.296c.256.257.622.374.98.314l1.17-.195c.323-.054.654.036.905.245l1.33 1.108c.32.267.46.694.358 1.1a8.7 8.7 0 01-2.288 4.04l-.723.724a1.125 1.125 0 01-1.298.21l-.153-.076a1.125 1.125 0 01-.622-1.006v-1.089c0-.298-.119-.585-.33-.796l-1.347-1.347a1.125 1.125 0 01-.21-1.298L9.75 12l-1.64-1.64a6 6 0 01-1.676-3.257l-.172-1.03z" clip-rule="evenodd"/></svg>
+          <a href="https://b44ner.tech" target="_blank" rel="noopener noreferrer" aria-label="Visit b44ner.tech website">b44ner.tech</a>
+        </div>
+      </address>
       <p class="contact-note">
         // Available for freelance projects,<br>
-        // collaborations & digital solutions.<br>
+        // collaborations &amp; digital solutions.<br>
         // Response time: &lt; 24hrs
       </p>
     </div>
 
-    <form class="contact-form reveal reveal-delay-2" id="contactForm">
+    <!-- Contact form using Formspree — replace YOUR_FORM_ID -->
+    <form class="contact-form reveal reveal-delay-2" id="contactForm" action="https://formspree.io/f/YOUR_FORM_ID" method="POST" novalidate>
       <div>
         <label class="form-label" for="name">// NAME</label>
-        <input type="text" id="name" class="form-input" placeholder="Your name" required autocomplete="name">
+        <input type="text" id="name" name="name" class="form-input" placeholder="Your name" required autocomplete="name" aria-required="true" />
       </div>
       <div>
         <label class="form-label" for="email">// EMAIL</label>
-        <input type="email" id="email" class="form-input" placeholder="your@email.com" required autocomplete="email">
+        <input type="email" id="email" name="email" class="form-input" placeholder="your@email.com" required autocomplete="email" aria-required="true" />
       </div>
       <div>
         <label class="form-label" for="message">// MESSAGE</label>
-        <textarea id="message" class="form-input" placeholder="Transmit your message..." required></textarea>
+        <textarea id="message" name="message" class="form-input" placeholder="Transmit your message..." required aria-required="true"></textarea>
       </div>
       <button type="submit" class="submit-btn">TRANSMIT MESSAGE &nbsp;→</button>
-      <div id="msgStatus" class="msg-status"></div>
+      <div id="msgStatus" class="msg-status" role="status" aria-live="polite"></div>
     </form>
   </div>
 </section>
 
+</main>
+
 <!-- ══ FOOTER ══ -->
 <footer>
   <div class="footer-left">
-    <div class="footer-logo">B44NER.TECH</div>
+    <p class="footer-logo" aria-label="B44ner Tech">B44NER.TECH</p>
     <p>© 2026 AASHISH KUMAR RAY · BUILT WITH PRECISION</p>
   </div>
-  <div class="footer-links">
-    <a href="mailto:Tech.aashish1277@gmail.com" title="Email"><i class="fas fa-envelope"></i></a>
-    <a href="https://t.me/TechTrovebyb44ner" target="_blank" title="Telegram"><i class="fab fa-telegram"></i></a>
-    <a href="https://b44ner.tech" target="_blank" title="Website"><i class="fas fa-globe"></i></a>
-  </div>
+  <nav class="footer-links" aria-label="Social links">
+    <a href="mailto:Tech.aashish1277@gmail.com" aria-label="Email Aashish Kumar Ray">
+      <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M1.5 8.67v8.58a3 3 0 003 3h15a3 3 0 003-3V8.67l-8.928 5.493a3 3 0 01-3.144 0L1.5 8.67z"/><path d="M22.5 6.908V6.75a3 3 0 00-3-3h-15a3 3 0 00-3 3v.158l9.714 5.978a1.5 1.5 0 001.572 0L22.5 6.908z"/></svg>
+    </a>
+    <a href="https://t.me/TechTrovebyb44ner" target="_blank" rel="noopener noreferrer" aria-label="Telegram — Tech Trove channel">
+      <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M22 2L11 13M22 2l-7 20-4-9-9-4 20-7z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg>
+    </a>
+    <a href="https://b44ner.tech" target="_blank" rel="noopener noreferrer" aria-label="Visit b44ner.tech">
+      <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M12 2.25c-5.385 0-9.75 4.365-9.75 9.75s4.365 9.75 9.75 9.75 9.75-4.365 9.75-9.75S17.385 2.25 12 2.25zM6.262 6.072a8.25 8.25 0 1010.562-.766 4.5 4.5 0 01-1.318 1.357L14.25 7.5l.165.33a.809.809 0 01-1.086 1.085l-.604-.302a1.125 1.125 0 00-1.298.21l-.132.131c-.439.44-.439 1.152 0 1.591l.296.296c.256.257.622.374.98.314l1.17-.195c.323-.054.654.036.905.245l1.33 1.108c.32.267.46.694.358 1.1a8.7 8.7 0 01-2.288 4.04l-.723.724a1.125 1.125 0 01-1.298.21l-.153-.076a1.125 1.125 0 01-.622-1.006v-1.089c0-.298-.119-.585-.33-.796l-1.347-1.347a1.125 1.125 0 01-.21-1.298L9.75 12l-1.64-1.64a6 6 0 01-1.676-3.257l-.172-1.03z" clip-rule="evenodd"/></svg>
+    </a>
+  </nav>
 </footer>
 
-<button id="btt" title="Back to top"><i class="fas fa-chevron-up"></i></button>
+<button id="btt" aria-label="Back to top" title="Back to top">
+  <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M11.47 7.72a.75.75 0 011.06 0l7.5 7.5a.75.75 0 11-1.06 1.06L12 9.31l-6.97 6.97a.75.75 0 01-1.06-1.06l7.5-7.5z" clip-rule="evenodd"/></svg>
+</button>
 
 <script>
-/* ══ CANVAS BG ══ */
+/* ══ CANVAS BG — throttled for battery ══ */
 const canvas = document.getElementById('bgCanvas');
 const ctx = canvas.getContext('2d');
-function resize(){ canvas.width = innerWidth; canvas.height = innerHeight; }
-resize(); addEventListener('resize', resize);
-let t = 0;
+let canvasW, canvasH;
+function resize(){
+  canvasW = canvas.width = innerWidth;
+  canvasH = canvas.height = innerHeight;
+}
+resize();
+let resizeTimer;
+addEventListener('resize', () => { clearTimeout(resizeTimer); resizeTimer = setTimeout(resize, 150); });
+
+let t = 0, rafId;
+const glows = [[.18,.5,'rgba(0,119,255,.10)'],[.82,.24,'rgba(122,44,255,.10)'],[.5,.82,'rgba(18,183,106,.07)']];
 (function drawBg(){
-  ctx.clearRect(0,0,canvas.width,canvas.height);
+  ctx.clearRect(0,0,canvasW,canvasH);
+  // grid
   ctx.strokeStyle='rgba(0,119,255,0.07)'; ctx.lineWidth=1;
   const g=60;
-  for(let x=0;x<canvas.width;x+=g){ctx.beginPath();ctx.moveTo(x,0);ctx.lineTo(x,canvas.height);ctx.stroke();}
-  for(let y=0;y<canvas.height;y+=g){ctx.beginPath();ctx.moveTo(0,y);ctx.lineTo(canvas.width,y);ctx.stroke();}
-  [[.18,.5,'rgba(0,119,255,.10)'],[.82,.24,'rgba(122,44,255,.10)'],[.5,.82,'rgba(18,183,106,.07)']].forEach(([xr,yr,col],i)=>{
-    const grd=ctx.createRadialGradient(canvas.width*xr+Math.sin(t*.5+i)*40,canvas.height*yr+Math.cos(t*.4+i)*30,0,canvas.width*xr,canvas.height*yr,canvas.width*.35);
+  for(let x=0;x<canvasW;x+=g){ctx.beginPath();ctx.moveTo(x,0);ctx.lineTo(x,canvasH);ctx.stroke();}
+  for(let y=0;y<canvasH;y+=g){ctx.beginPath();ctx.moveTo(0,y);ctx.lineTo(canvasW,y);ctx.stroke();}
+  // glows
+  glows.forEach(([xr,yr,col],i)=>{
+    const gx = canvasW*xr+Math.sin(t*.5+i)*40;
+    const gy = canvasH*yr+Math.cos(t*.4+i)*30;
+    const grd=ctx.createRadialGradient(gx,gy,0,gx,gy,canvasW*.35);
     grd.addColorStop(0,col); grd.addColorStop(1,'transparent');
-    ctx.fillStyle=grd; ctx.fillRect(0,0,canvas.width,canvas.height);
+    ctx.fillStyle=grd; ctx.fillRect(0,0,canvasW,canvasH);
   });
-  t+=.01; requestAnimationFrame(drawBg);
+  t+=.008; // slightly slower = less CPU
+  rafId=requestAnimationFrame(drawBg);
 })();
+
+// Pause animation when tab is hidden (saves CPU/battery)
+document.addEventListener('visibilitychange', () => {
+  if(document.hidden){ cancelAnimationFrame(rafId); }
+  else {
+    t=0;
+    (function loop(){ ctx.clearRect(0,0,canvasW,canvasH); glows.forEach(([xr,yr,col],i)=>{ const gx=canvasW*xr+Math.sin(t*.5+i)*40; const gy=canvasH*yr+Math.cos(t*.4+i)*30; const grd=ctx.createRadialGradient(gx,gy,0,gx,gy,canvasW*.35); grd.addColorStop(0,col); grd.addColorStop(1,'transparent'); ctx.fillStyle=grd; ctx.fillRect(0,0,canvasW,canvasH); }); t+=.008; rafId=requestAnimationFrame(loop); })();
+  }
+});
 
 /* ══ PROGRESS BAR ══ */
 const prog = document.getElementById('progress');
-addEventListener('scroll',()=>{
-  const h=document.documentElement;
-  const pct=(scrollY/(h.scrollHeight-h.clientHeight))*100;
-  prog.style.width=pct+'%';
+let ticking = false;
+addEventListener('scroll', () => {
+  if(!ticking){
+    requestAnimationFrame(() => {
+      const h = document.documentElement;
+      prog.style.width = (scrollY/(h.scrollHeight-h.clientHeight)*100)+'%';
+      ticking = false;
+    });
+    ticking = true;
+  }
 });
 
 /* ══ HAMBURGER ══ */
-const ham=document.getElementById('hamburger');
-const mNav=document.getElementById('mobileNav');
-ham.addEventListener('click',()=>{
-  ham.classList.toggle('open');
-  mNav.classList.toggle('open');
-  document.body.style.overflow=mNav.classList.contains('open')?'hidden':'';
+const ham = document.getElementById('hamburger');
+const mNav = document.getElementById('mobileNav');
+function openMenu(open){
+  ham.classList.toggle('open', open);
+  mNav.classList.toggle('open', open);
+  ham.setAttribute('aria-expanded', open);
+  mNav.setAttribute('aria-hidden', !open);
+  document.body.style.overflow = open ? 'hidden' : '';
+}
+ham.addEventListener('click', () => openMenu(!mNav.classList.contains('open')));
+document.querySelectorAll('.mob-link').forEach(a => {
+  a.addEventListener('click', () => openMenu(false));
 });
-document.querySelectorAll('.mob-link').forEach(a=>{
-  a.addEventListener('click',()=>{
-    ham.classList.remove('open');
-    mNav.classList.remove('open');
-    document.body.style.overflow='';
-  });
-});
+mNav.addEventListener('click', e => { if(e.target === mNav) openMenu(false); });
+// close on Escape
+document.addEventListener('keydown', e => { if(e.key==='Escape' && mNav.classList.contains('open')) openMenu(false); });
 
 /* ══ SCROLL REVEAL ══ */
-const obs=new IntersectionObserver(entries=>{
-  entries.forEach(e=>{ if(e.isIntersecting){ e.target.classList.add('visible'); obs.unobserve(e.target); }});
-},{threshold:.1});
-document.querySelectorAll('.reveal').forEach(el=>obs.observe(el));
+const obs = new IntersectionObserver(entries => {
+  entries.forEach(e => { if(e.isIntersecting){ e.target.classList.add('visible'); obs.unobserve(e.target); }});
+}, {threshold:.1, rootMargin:'0px 0px -40px 0px'});
+document.querySelectorAll('.reveal').forEach(el => obs.observe(el));
 
 /* ══ ACTIVE NAV LINK ══ */
-const sections=document.querySelectorAll('section[id]');
-const navAs=document.querySelectorAll('.nav-links a');
-const navObs=new IntersectionObserver(entries=>{
-  entries.forEach(e=>{
+const sections = document.querySelectorAll('section[id]');
+const navAs = document.querySelectorAll('.nav-links a');
+const navObs = new IntersectionObserver(entries => {
+  entries.forEach(e => {
     if(e.isIntersecting){
-      navAs.forEach(a=>a.classList.remove('active'));
-      const link=document.querySelector(`.nav-links a[href="#${e.target.id}"]`);
+      navAs.forEach(a => a.classList.remove('active'));
+      const link = document.querySelector(`.nav-links a[href="#${e.target.id}"]`);
       if(link) link.classList.add('active');
     }
   });
-},{threshold:.4});
-sections.forEach(s=>navObs.observe(s));
+}, {threshold:.4});
+sections.forEach(s => navObs.observe(s));
 
 /* ══ BACK TO TOP ══ */
-const btt=document.getElementById('btt');
-addEventListener('scroll',()=>btt.classList.toggle('show',scrollY>400));
-btt.addEventListener('click',()=>scrollTo({top:0,behavior:'smooth'}));
-
-/* ══ MOBILE NAV — close on outside click ══ */
-mNav.addEventListener('click',e=>{
-  if(e.target===mNav){
-    ham.classList.remove('open');
-    mNav.classList.remove('open');
-    document.body.style.overflow='';
-  }
-});
+const btt = document.getElementById('btt');
+addEventListener('scroll', () => btt.classList.toggle('show', scrollY > 400), {passive:true});
+btt.addEventListener('click', () => scrollTo({top:0,behavior:'smooth'}));
 
 /* ══ CONTACT FORM ══ */
-document.getElementById('contactForm').addEventListener('submit',function(e){
+const form = document.getElementById('contactForm');
+const status = document.getElementById('msgStatus');
+
+form.addEventListener('submit', async function(e){
   e.preventDefault();
-  const name=document.getElementById('name').value.trim();
-  const email=document.getElementById('email').value.trim();
-  const msg=document.getElementById('message').value.trim();
-  const status=document.getElementById('msgStatus');
-  if(!name||!email||!msg){
-    status.textContent='// ERROR: ALL FIELDS REQUIRED';
-    status.className='msg-status msg-error';
-    status.style.display='block';
-    return;
+  const btn = form.querySelector('.submit-btn');
+  btn.textContent = 'TRANSMITTING...';
+  btn.disabled = true;
+
+  // If Formspree ID is not set, fall back to mailto
+  const action = form.getAttribute('action');
+  if(action.includes('YOUR_FORM_ID')){
+    const name = document.getElementById('name').value.trim();
+    const email = document.getElementById('email').value.trim();
+    const msg = document.getElementById('message').value.trim();
+    const sub = encodeURIComponent('Portfolio Contact from '+name);
+    const body = encodeURIComponent('Name: '+name+'\nEmail: '+email+'\n\nMessage:\n'+msg);
+    location.href = 'mailto:Tech.aashish1277@gmail.com?subject='+sub+'&body='+body;
+    showStatus('// OPENING EMAIL CLIENT — replace Formspree ID for direct delivery', 'success');
+  } else {
+    try {
+      const data = new FormData(form);
+      const res = await fetch(action, {method:'POST',body:data,headers:{'Accept':'application/json'}});
+      if(res.ok){
+        showStatus('// MESSAGE TRANSMITTED SUCCESSFULLY', 'success');
+        form.reset();
+      } else {
+        showStatus('// TRANSMISSION ERROR — try email directly', 'error');
+      }
+    } catch {
+      showStatus('// CONNECTION FAILED — check your network', 'error');
+    }
   }
-  const sub=encodeURIComponent('Portfolio Contact from '+name);
-  const body=encodeURIComponent('Name: '+name+'\nEmail: '+email+'\n\nMessage:\n'+msg);
-  location.href='mailto:Tech.aashish1277@gmail.com?subject='+sub+'&body='+body;
-  status.textContent='// OPENING YOUR EMAIL CLIENT...';
-  status.className='msg-status msg-success';
-  status.style.display='block';
-  this.reset();
-  setTimeout(()=>status.style.display='none',5000);
+
+  btn.textContent = 'TRANSMIT MESSAGE →';
+  btn.disabled = false;
 });
+
+function showStatus(msg, type){
+  status.textContent = msg;
+  status.className = 'msg-status ' + (type==='success' ? 'msg-success' : 'msg-error');
+  status.style.display = 'block';
+  setTimeout(() => status.style.display='none', 5000);
+}
 </script>
 </body>
 </html>
